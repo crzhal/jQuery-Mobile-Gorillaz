@@ -1,0 +1,309 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Interface Mobile TL-01</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="themes/black.min.css" />
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Prompt' rel='stylesheet' type='text/css'>
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+
+  <body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!---============== MESSAGES (POPUPS)==============-->
+    <div data-role="popup" class="js-errPopup js-notConPopup">
+      <p>Veuillez vous connecter avant d'accèder au panier<p>
+    </div>
+    <div data-role="popup" class="js-errPopup js-wrongLogPopup">
+      <p>Nom ou courriel incorrect</p>
+    </div>
+    <div data-role="popup" class="js-errPopup js-notConBuy">
+      <p>Vous devez vous connecter avant de pouvoir ajouter au panier</p>
+    </div>
+    <div data-role="popup" class="js-successPopup js-successBuy">
+      <p>Votre sélection à été ajouté au panier!</p>
+    </div>
+    <!---==================== PAGE D'ACCUEIL====================-->
+    <div data-role="page" id="page1">
+      <div data-role="header">
+        <h1>Accueil</h1>
+      </div>
+      <div data-role="main" class="ui-content">
+        <div data-role="controlgroup" data-type="horizontal" class=controlGroup>
+          <a href="#page9" class="ui-btn js-loginBtn js-logout"><i class="fa fa-user" aria-hidden="true"></i> <span class="js-connectionBtnText">Se connecter</span></a>
+          <a href="#page8" class="ui-btn js-panierAchat" data-transition="flip"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Panier d'achat</a>
+        </div>
+        <img class="mainImg responsiveImg" src="img/accimg.gif" alt="Gorillaz" height="571" width="556">
+        <h1 class="mainTitle">Albums de Gorillaz</h1>
+        <form class="ui-filterable" name="searchForm">
+          <input data-type="search" class="filter" placeholder="Rechercher..." />
+        </form>
+        <ul data-role="listview" data-filter="true" data-input=".filter" data-inset="true">
+          <li><a href="#page2">Gorillaz</a></li>
+          <li><a href="#page3">Demon Days</a></li>
+          <li><a href="#page4">Plastic Beach</a></li>
+          <li><a href="#page5">The Fall</a></li>
+          <li><a href="#page6">G-Sides</a></li>
+        </ul>
+        <a href="#page7" class="ui-btn"><i class="fa fa-th" aria-hidden="true"></i> Les oeuvres en images</a>
+      </div>
+      <div data-role="footer">
+        <h2>AJ Beaudry 2016</h2>
+      </div>
+    </div>
+    <!---====================== OEUVRE 1 =======================-->
+    <div data-role="page" id="page2">
+      <div data-role="header">
+        <h1>Gorillaz</h1>
+      </div>
+      <div data-role="main" class="ui-content">
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#page9" class="ui-btn js-loginBtn js-logout"><i class="fa fa-user" aria-hidden="true"></i> <span class="js-connectionBtnText">Se connecter</span></a>
+          <a href="#page8" class="ui-btn js-panierAchat" data-transition="flip"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Panier d'achat</a>
+        </div>
+        <img src="img/GorillazAlbum.jpg" alt="Album Gorillaz" class="albumsPics responsiveImg" heihgt="300" width="300">
+        <div data-role="collapsible">
+          <h3>Gorillaz (2001)</h3>
+          <p><strong>Gorillaz</strong> est le premier album studio du groupe éponyme virtuel <cite>Gorillaz</cite>, sorti en 2001. Il est produit par <cite>Dan « The Automator » Nakamura</cite>. L'album contient des participations de <cite>Tina Weymouth</cite>et <cite>Chris Frantz</cite> (respectivement bassiste et batteur de <cite>Talking Heads</cite>), <cite>Kid Koala</cite>, <cite>Del the Funky Homosapien</cite>, <cite>Miho Hatori</cite> (de <cite>Cibo Matto</cite>) ou <cite>Ibrahim Ferrer</cite> (du <cite>Buena Vista Social Club</cite>).</p>
+        </div>
+        <button class="ui-btn js-buyBtn" data-test="Gorillaz (2001)">Acheter</button>
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#page1" class="ui-btn" data-transiton="pop"><i class="fa fa-chevron-left" aria-hidden="true"></i> Retour</a>
+        </div>
+      </div>
+      <div data-role="footer">
+        <h2>AJ Beaudry 2016</h2>
+      </div>
+    </div>
+    <!---====================== OEUVRE 2 =======================-->
+    <div data-role="page" id="page3">
+      <div data-role="header">
+        <h1>Demon Days</h1>
+      </div>
+      <div data-role="main" class="ui-content">
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#page9" class="ui-btn js-loginBtn js-logout"><i class="fa fa-user" aria-hidden="true"></i> <span class="js-connectionBtnText">Se connecter</span></a>
+          <a href="#page8" class="ui-btn js-panierAchat" data-transition="flip"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Panier d'achat</a>
+        </div>
+        <img src="img/ddays.png" class="albumsPics responsiveImg" alt="Demon Days Album" height="300" width="300">
+        <br>
+        <div data-role="collapsible">
+          <h3>Demon Days (2005)</h3>
+          <p><strong>Demon Days</strong> est le deuxième album studio de
+            <cite>Gorillaz</cite>, sorti en 2005. Il est produit intégralement par
+            <cite>Danger Mouse</cite>. Dès sa sortie, l'album se classe 1er au Royaume-Uni et 6e aux États-Unis. Le second single,
+            <cite>DARE</cite>, permet au groupe d'être n°1, pour la première fois de leur carrière, au Royaume-Uni. Depuis,
+            <cite>Demon Days</cite> a été certifié double disque de platine aux États-Unis et 5 fois platine au Royaume-Uni.</p>
+        </div>
+        <button class="ui-btn js-buyBtn" data-test="Demon Days (2005)">Acheter</button>
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#page1" class="ui-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i> Retour</a>
+        </div>
+      </div>
+      <div data-role="footer">
+        <h2>AJ Beaudry 2016</h2>
+      </div>
+    </div>
+    <!---====================== OEUVRE 3 =======================-->
+    <div data-role="page" id="page4">
+      <div data-role="header">
+        <h1>Plastic Beach</h1>
+      </div>
+      <div data-role="main" class="ui-content">
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#page9" class="ui-btn js-loginBtn js-logout"><i class="fa fa-user" aria-hidden="true"></i> <span class="js-connectionBtnText">Se connecter</span></a>
+          <a href="#page8" class="ui-btn js-panierAchat" data-transition="flip"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Panier d'achat</a>
+        </div>
+        <img src="img/pb.jpg" class="albumsPics responsiveImg" alt="Plastic Beach Album" height="300" width="300">
+        <br>
+        <div data-role="collapsible">
+          <h3>Plastic Beach (2010)</h3>
+          <p><strong>Plastic Beach</strong> est le 3e album studio du groupe britannique
+            <cite>Gorillaz</cite> sorti en 2010. En novembre 2010, il se serait vendu à un million d'exemplaires dans le monde. Une réédition est prévue pour le 29 novembre 2010. Elle contient le titre
+            <cite>Doncamatic</cite> avec le Britannique
+            <cite>Daley</cite>.</p>
+        </div>
+        <button class="ui-btn js-buyBtn" data-test="Plastic Beach (2010)">Acheter</button>
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#page1" class="ui-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i> Retour</a>
+        </div>
+      </div>
+      <div data-role="footer">
+        <h2>AJ Beaudry 2016</h2>
+      </div>
+    </div>
+    <!---====================== OEUVRE 4 =======================-->
+    <div data-role="page" id="page5">
+      <div data-role="header">
+        <h1>The Fall</h1>
+      </div>
+      <div data-role="main" class="ui-content">
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#page9" class="ui-btn js-loginBtn js-logout"><i class="fa fa-user" aria-hidden="true"></i> <span class="js-connectionBtnText">Se connecter</span></a>
+          <a href="#page8" class="ui-btn js-panierAchat" data-transition="flip"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Panier d'achat</a>
+        </div>
+        <img src="img/thefall.jpg" class="albumsPics responsiveImg" alt="The Fall Album" height="300" width="300">
+        <br>
+        <div data-role="collapsible">
+          <h3>The Fall (2010)</h3>
+          <p><strong>The Fall</strong> est le 4e album studio du groupe britannique
+            <cite>Gorillaz</cite>, sorti en 2010. Enregistré en octobre 2010 durant la tournée du groupe
+            <cite>Escape to Plastic Beach World Tour</cite> en Amérique du Nord, il a été entièrement conçu sur une tablette numérique iPad, et rendu disponible en téléchargement gratuit.</p>
+        </div>
+        <button class="ui-btn js-buyBtn" data-test="The Fall (2010)">Acheter</button>
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#page1" class="ui-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i> Retour</a>
+        </div>
+      </div>
+      <div data-role="footer">
+        <h2>AJ Beaudry 2016</h2>
+      </div>
+    </div>
+    <!---====================== OEUVRE 5 =======================-->
+    <div data-role="page" id="page6">
+      <div data-role="header">
+        <h1>G-Sides</h1>
+      </div>
+      <div data-role="main" class="ui-content">
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#page9" class="ui-btn js-loginBtn js-logout"><i class="fa fa-user" aria-hidden="true"></i> <span class="js-connectionBtnText">Se connecter</span></a>
+          <a href="#page8" class="ui-btn js-panierAchat" data-transition="flip"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Panier d'achat</a>
+        </div>
+        <div class="ui-bar"><img src="img/gsides.jpg" class="albumsPics responsiveImg" alt="G-Sides Albums" height="300" width="300"></div>
+        <br>
+        <div data-role="collapsible">
+          <h3>G-Sides</h3>
+          <p><strong>G-Sides</strong> est une compilation de
+            <cite>Gorillaz</cite>, sorti au Japon en 2001, puis en 2002 dans le reste du monde. Il s'agit d'un recueil de faces B et de remixes. Suivant les pays, il y a eu plusieurs versions commercialisées de l'album.</p>
+        </div>
+        <button class="ui-btn js-buyBtn" data-test="G-Sides">Acheter</button>
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#page1" class="ui-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i> Retour</a>
+        </div>
+      </div>
+      <div data-role="footer">
+        <h2>AJ Beaudry 2016</h2>
+      </div>
+    </div>
+    <!---====================== OEUVRES EN IMAGES =======================-->
+    <div data-role="page" id="page7">
+      <div data-role="header">
+        <h1>Les oeuvres en images</h1>
+      </div>
+      <div data-role="main" class="ui-content">
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#page9" class="ui-btn loginBtn js-logout"><i class="fa fa-user" aria-hidden="true"></i> <span class="js-connectionBtnText">Se connecter</span></a>
+          <a href="#page8" class="ui-btn js-panierAchat" data-transition="flip"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Panier d'achat</a>
+        </div>
+        <h1 class="imgGallery">Oeuvres en images</h1>
+        <fieldset class="ui-grid-b">
+          <div class="ui-grid-b">
+            <div class="ui-block-a">
+              <div class="ui-bar">
+                <a href="#page2">
+                  <img src="img/GorillazAlbum.jpg" alt="Album Gorillaz" class="albumsPics" heihgt="300" width="300">
+                </a>
+              </div>
+            </div>
+            <div class="ui-block-b">
+              <div class="ui-bar">
+                <a href="#page3">
+                  <img src="img/ddays.png" class="albumsPics" alt="Demon Days Album" height="300" width="300">
+                </a>
+              </div>
+            </div>
+            <div class="ui-block-c">
+              <div class="ui-bar">
+                <a href="#page4">
+                  <img src="img/pb.jpg" class="albumsPics" alt="Plastic Beach Album" height="300" width="300">
+                </a>
+              </div>
+            </div>
+            <div class="ui-block-a">
+              <div class="ui-bar">
+                <a href="#page5">
+                  <img src="img/thefall.jpg" class="albumsPics" alt="The Fall Album" height="300" width="300">
+                </a>
+              </div>
+            </div>
+            <div class="ui-block-b">
+              <div class="ui-bar">
+                <a href="#page6">
+                  <img src="img/gsides.jpg" class="albumsPics" alt="G-Sides Albums" height="300" width="300">
+                </a>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#page1" class="ui-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i> Retour</a>
+        </div>
+      </div>
+      <div data-role="footer">
+        <h2>AJ Beaudry 2016</h2>
+      </div>
+    </div>
+    <!---====================== PANIER D'ACHATS =======================-->
+    <div data-role="page" id="page8">
+      <div data-role="header">
+        <h1>Panier d'achat</h1>
+      </div>
+      <div data-role="main" class="ui-content">
+        <h1>Votre Panier</h1>
+        <div class="listeDuPanier">
+          <ul data-role="listview" class="js-listePanier">
+          </ul>
+        </div>
+        <br>
+        <br>
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#page1" class="ui-btn" data-transition="flip"><i class="fa fa-chevron-left" aria-hidden="true"></i> Retour</a>
+          <button class="ui-btn js-clearCartBtn">Supprimer la liste</button>
+        </div>
+      </div>
+      <div data-role="footer">
+        <h2>AJ Beaudry 2016</h2>
+      </div>
+    </div>
+    <!---====================== CONNEXION =======================-->
+    <div data-role="page" id="page9">
+      <div data-role="header">
+        <h1>Connexion</h1>
+      </div>
+      <div data-role="main" class="ui-content">
+        <h1>Connectez-vous</h1>
+        <form class="loginForm" name="loginForm">
+          <label for="nom"><i class="fa fa-user" aria-hidden="true"></i> Mot de passe:</label>
+          <input type="text" name="nom" class="js-password" placeholder="Entrez votre mot de passe...">
+          <label for="courriel"><i class="fa fa-envelope" aria-hidden="true"></i> Courriel:</label>
+          <input type="text" name="courriel" class="js-courriel" placeholder="Entrez votre courriel...">
+          <input class="js-loginSubmit" type="button" value="Se connecter">
+        </form>
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#page1" class="ui-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i> Retour</a>
+        </div>
+      </div>
+      <div data-role="footer">
+        <h2>AJ Beaudry 2016</h2>
+      </div>
+    </div>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    </script>
+  </body>
+
+</html>
